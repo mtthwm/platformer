@@ -12,17 +12,20 @@
             "scaleInEditor": 1
         },
         "tilemaps/Castle.json": {
-            "scale": 5.5,
+            "scale": 2.4,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 152.45454545454547,
-                "y": 193.90909090909093
+                "x": 178.54166666666666,
+                "y": 111.45833333333334
             }
         },
         "tilemaps/Castle.json#Castle": {
             "scaleInDock": 1
         },
         "tilemaps/Castle.json#Spawners": {
+            "scaleInDock": 1
+        },
+        "tilemaps/Castle.json#castle_tileset": {
             "scaleInDock": 1
         },
         "tilesets/Castle.json": {
