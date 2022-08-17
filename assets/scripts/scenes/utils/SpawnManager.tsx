@@ -18,7 +18,6 @@ export default class SpawnManager {
 
     public spawnObjects (objects: Phaser.Types.Tilemaps.TiledObject[]) {
         objects.forEach((item) => {
-            console.log(this.mappings);
             const spawnProperty = item.properties.find(item => item.name === 'spawn');
             this.mappings[spawnProperty.value].spawn(this.scene, item);
         });
