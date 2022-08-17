@@ -7,7 +7,7 @@ export default abstract class Level extends Phaser.Scene {
     abstract name: string;
     abstract tilesheetUrl: URL;
     abstract tilemapJSON: object;
-    abstract spawner: SpawnManager;
+    private spawner: SpawnManager;
 
     public preload () {
         this.load.image(`${this.id}_tilesheet`, this.tilesheetUrl.toString());
@@ -25,7 +25,11 @@ export default abstract class Level extends Phaser.Scene {
 
         const tileset = map.addTilesetImage(`${this.id}_tileset`, `${this.id}_tilesheet`);
         
-        map.createLayer('Ground', tileset, 0 , 0);
+        const groundLayer = map.createLayer('Ground', tileset, 0 , 0);
+
+        // Set up the layer to have matter bodies. Any colliding tiles will be given a Matter body.
+        groundLayer.setCollisionByProperty({ collides: true });
+        // this.physics.collide()
 
         this.spawner.addMapping('player', new SpawnPlayerAction());
 
