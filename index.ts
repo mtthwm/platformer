@@ -1,16 +1,18 @@
 import Phaser from 'phaser';
-import CastleScene from './assets/scripts/scenes/Castle';
+import CastleLevel from './assets/scripts/scenes/CastleLevel';
 import GameConfig from './assets/scripts/config/GameConfig';
 
 
 window.onload = () => {
+    const castleLevel = new CastleLevel({});
+
     var config: Phaser.Types.Core.GameConfig = {
         type: Phaser.AUTO,
         zoom: GameConfig.pixelSize,
         backgroundColor: '#ffffff',
         width: GameConfig.tileSize * GameConfig.screenWidthTiles,
         height: GameConfig.tileSize * GameConfig.screenWidthTiles,
-        scene: new CastleScene({})
+        scene: castleLevel,
     };
     
     var game = new Phaser.Game(config);

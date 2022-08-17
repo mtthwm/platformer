@@ -46,7 +46,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":13,
+ "nextobjectid":16,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",
@@ -59,7 +59,7 @@
          "imageheight":48,
          "imagewidth":48,
          "margin":0,
-         "name":"Castle",
+         "name":"castle_tileset",
          "spacing":0,
          "tilecount":9,
          "tileheight":16,
