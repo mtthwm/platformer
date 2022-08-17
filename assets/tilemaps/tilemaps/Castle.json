@@ -21,9 +21,32 @@
          "width":24,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"Spawners",
+         "objects":[
+                {
+                 "gid":10,
+                 "height":16,
+                 "id":12,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":64,
+                 "y":160
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":4,
- "nextobjectid":10,
+ "nextlayerid":5,
+ "nextobjectid":13,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",
@@ -39,6 +62,25 @@
          "name":"Castle",
          "spacing":0,
          "tilecount":9,
+         "tileheight":16,
+         "tilewidth":16
+        }, 
+        {
+         "columns":5,
+         "firstgid":10,
+         "image":"..\/tilesheets\/SpawnerIcons.png",
+         "imageheight":80,
+         "imagewidth":80,
+         "margin":0,
+         "name":"Spawners",
+         "properties":[
+                {
+                 "name":"Spawn Type",
+                 "type":"string",
+                 "value":"player"
+                }],
+         "spacing":0,
+         "tilecount":25,
          "tileheight":16,
          "tilewidth":16
         }],

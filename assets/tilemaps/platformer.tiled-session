@@ -3,11 +3,29 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "tilemaps/Castle.json",
     "expandedProjectPaths": [
     ],
     "fileStates": {
         "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilemaps/Castle.json": {
+            "scale": 5.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 152.45454545454547,
+                "y": 193.90909090909093
+            }
+        },
+        "tilemaps/Castle.json#Castle": {
+            "scaleInDock": 1
+        },
+        "tilemaps/Castle.json#Spawners": {
+            "scaleInDock": 1
+        },
+        "tilesets/Castle.json": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         }
@@ -18,10 +36,15 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
+        "tilesets/Castle.json",
+        "tilemaps/Castle.json"
     ],
     "project": "platformer.tiled-project",
     "recentFiles": [
+        "tilesets/Castle.json",
+        "tilemaps/Castle.json"
     ],
+    "tileset.embedInMap": true,
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {
         "height": 16,

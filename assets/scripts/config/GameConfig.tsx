@@ -1,6 +1,6 @@
 export default {
     screenWidthTiles: 24,
-    screenHeightTiles: 10,
+    screenHeightTiles: 13,
     tileSize: 16,
-    pixelSize: 2,
+    pixelSize: 3,
 }

@@ -6,7 +6,6 @@ import GameConfig from './assets/scripts/config/GameConfig';
 window.onload = () => {
     var config: Phaser.Types.Core.GameConfig = {
         type: Phaser.AUTO,
-        pixelArt: true,
         zoom: GameConfig.pixelSize,
         backgroundColor: '#ffffff',
         width: GameConfig.tileSize * GameConfig.screenWidthTiles,
