@@ -5,11 +5,11 @@ import SpawnAction from './SpawnAction';
 export default class SpawnManager {
     private mappings: {
         [key: string]: SpawnAction,
-    };
-    private game: Phaser.Game;
+    } = {};
+    private scene: Phaser.Scene;
 
-    constructor (game: Phaser.Game) {
-        this.game = game;
+    constructor (scene: Phaser.Scene) {
+        this.scene = scene;
     }
 
     public addMapping (key: string, action: SpawnAction) {
@@ -18,7 +18,9 @@ export default class SpawnManager {
 
     public spawnObjects (objects: Phaser.Types.Tilemaps.TiledObject[]) {
         objects.forEach((item) => {
-            this.mappings[item.properties.spawn].spawn(this.game, item);
+            console.log(this.mappings);
+            const spawnProperty = item.properties.find(item => item.name === 'spawn');
+            this.mappings[spawnProperty.value].spawn(this.scene, item);
         });
     }
 }

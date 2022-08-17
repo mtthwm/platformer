@@ -10,6 +10,13 @@ window.onload = () => {
         type: Phaser.AUTO,
         zoom: GameConfig.pixelSize,
         backgroundColor: '#ffffff',
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 300 },
+                debug: false
+            }
+        },
         width: GameConfig.tileSize * GameConfig.screenWidthTiles,
         height: GameConfig.tileSize * GameConfig.screenWidthTiles,
         scene: castleLevel,

@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import SpawnPlayerAction from './utils/SpawnActions/SpawnPlayerAction';
+import SpawnManager from './utils/SpawnManager';
 
 export default abstract class Level extends Phaser.Scene {
     abstract id: string;
@@ -9,6 +11,10 @@ export default abstract class Level extends Phaser.Scene {
     public preload () {
         this.load.image(`${this.id}_tilesheet`, this.tilesheetUrl.toString());
         this.load.tilemapTiledJSON(`${this.id}_tilemap`, this.tilemapJSON);
+        this.load.spritesheet('player', new URL('../../art/player/Player.png', import.meta.url).toString(), {
+            frameWidth: 16,
+            frameHeight: 32,
+        })
     }
 
     public create () {
@@ -19,6 +25,9 @@ export default abstract class Level extends Phaser.Scene {
         map.createLayer('Ground', tileset, 0 , 0);
 
 
-        map.getObjectLayer('Spawners').objects[0].properties
+        const spawner = new SpawnManager(this);
+        spawner.addMapping('player', new SpawnPlayerAction());
+        
+        spawner.spawnObjects(map.getObjectLayer('Spawners').objects);
    }
 }

@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-enum SpawnPositionMode {
+export enum SpawnPositionMode {
     CORNER,
     MIDDLE
 };
@@ -8,7 +8,7 @@ enum SpawnPositionMode {
 export default abstract class SpawnAction {
     abstract spawnPositionMode: SpawnPositionMode;
     
-    private getSpawnPosition(tiledObject: Phaser.Types.Tilemaps.TiledObject): {x: Number, y: Number}  {
+    protected getSpawnPosition(tiledObject: Phaser.Types.Tilemaps.TiledObject): {x: number, y: number}  {
         if (this.spawnPositionMode === SpawnPositionMode.CORNER) {
             return {x: Number(tiledObject.x), y: Number(tiledObject.y)};
         } else if (this.spawnPositionMode === SpawnPositionMode.MIDDLE) {
@@ -21,5 +21,5 @@ export default abstract class SpawnAction {
         }
     }
 
-    public abstract spawn (game: Phaser.Game, tiledObject: Phaser.Types.Tilemaps.TiledObject);
+    public abstract spawn (Scene: Phaser.Scene, tiledObject: Phaser.Types.Tilemaps.TiledObject): void;
 }
