@@ -21,5 +21,9 @@ export default abstract class SpawnAction {
         }
     }
 
-    public abstract spawn (Scene: Phaser.Scene, tiledObject: Phaser.Types.Tilemaps.TiledObject): void;
+    public abstract preload (scene: Phaser.Scene): void;
+
+    public abstract spawn (scene: Phaser.Scene, tiledObject: Phaser.Types.Tilemaps.TiledObject): void;
+
+    public abstract create (scene: Phaser.Scene): void;
 }

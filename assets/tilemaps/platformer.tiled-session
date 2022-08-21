@@ -26,6 +26,7 @@
             "scaleInDock": 1
         },
         "tilemaps/Castle.json#castle_tileset": {
+            "dynamicWrapping": false,
             "scaleInDock": 1
         },
         "tilesets/Castle.json": {
@@ -43,6 +44,7 @@
         "tilemaps/Castle.json"
     ],
     "project": "platformer.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "tilesets/Castle.json",
         "tilemaps/Castle.json"
