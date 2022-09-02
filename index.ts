@@ -11,7 +11,7 @@ window.onload = () => {
         zoom: GameConfig.pixelSize,
         backgroundColor: '#ffffff',
         physics: {
-            default: 'arcade',
+            default: 'matter',
             arcade: {
                 gravity: { y: 300 },
                 debug: true,
